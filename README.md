@@ -32,7 +32,6 @@
   <img src="screenshots/home.png" alt="Tic-Tac-Toe Master Main Menu" width="800">
 </p>
 
-> Replace the image above with your actual screenshot after adding it to `screenshots/main-menu.png`.
 
 ---
 
