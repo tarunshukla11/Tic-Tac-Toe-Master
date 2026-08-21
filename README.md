@@ -29,7 +29,7 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="screenshots/main-menu.png" alt="Tic-Tac-Toe Master Main Menu" width="800">
+  <img src="screenshots/home.png" alt="Tic-Tac-Toe Master Main Menu" width="800">
 </p>
 
 > Replace the image above with your actual screenshot after adding it to `screenshots/main-menu.png`.
@@ -386,17 +386,11 @@ Future improvements may include:
 
 # 📸 Screenshots
 
-Add screenshots here as the project develops.
+### Main Menu
 
-```markdown
-![Main Menu](screenshots/main-menu.png)
-
-![Gameplay](screenshots/gameplay.png)
-
-![Online Multiplayer](screenshots/online-multiplayer.png)
-```
-
----
+<p align="center">
+  <img src="screenshots/home.png" alt="Tic-Tac-Toe Master Main Menu" width="800">
+</p>
 
 # 👨‍💻 About the Developer
 
