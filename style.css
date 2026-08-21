@@ -908,27 +908,32 @@ button:active {
     font-size: 1.35rem;
   }
 }
-.download-apk-btn {
-  display: inline-flex;
+.btn-download {
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 12px 20px;
-  margin-top: 8px;
+  gap: 8px;
   box-sizing: border-box;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
 
-.download-apk-btn:hover {
+.btn-download:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
+  filter: brightness(1.08);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.25);
 }
 
-.download-apk-btn:active {
+.btn-download:active {
   transform: translateY(0);
 }
