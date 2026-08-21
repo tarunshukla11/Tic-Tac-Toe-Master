@@ -329,9 +329,7 @@ Tic-Tac-Toe-Master/
 ├── capacitor.config.json
 │
 ├── screenshots/
-│   ├── main-menu.png
-│   ├── gameplay.png
-│   └── online-multiplayer.png
+│   ├── home.png
 │
 ├── README.md
 └── .gitignore
