@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f0f1a">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <title>Tic Tac Toe - Play Online Free</title>
+  <meta name="description" content="Play Tic Tac Toe online for free. Challenge friends or play vs bot. Smooth animations, instant multiplayer.">
+  <meta name="keywords" content="tic tac toe, online, 2 player, free game, multiplayer">
+
+  <meta property="og:title" content="Tic Tac Toe - Play Online Free">
+  <meta property="og:description" content="Challenge friends to Tic Tac Toe. Fast, free online multiplayer.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+</head>
+<body>
+  <div style="display:none;">
+    <h1>Tic Tac Toe Online Game</h1>
+    <p>Free 2 player tic tac toe. Play against friends online or challenge the AI bot.</p>
+  </div>
+
+  <!-- Loading screen -->
+  <div id="loadingScreen">
+    <div class="logo">🎮</div>
+    <h1>Tic Tac Toe</h1>
+    <div class="mini-board" id="miniBoard">
+      <div class="mini-cell"></div>
+      <div class="mini-cell"></div>
+      <div class="mini-cell"></div>
+      <div class="mini-cell"></div>
+      <div class="mini-cell"></div>
+      <div class="mini-cell"></div>
+      <div class="mini-cell"></div>
+      <div class="mini-cell"></div>
+      <div class="mini-cell"></div>
+    </div>
+    <div class="loading-caption">Loading game<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+  </div>
+
+  <div id="menu" class="screen hidden">
+    <div class="logo">🎮</div>
+    <h1>Tic Tac Toe</h1>
+    <p class="subtitle">Choose mode</p>
+    <div class="menu-buttons">
+      <button class="btn-offline" onclick="startOfflineSetup()">
+        <span class="btn-icon">👥</span> Offline 1v1
+      </button>
+      <button class="btn-bot" onclick="showDifficulty()">
+        <span class="btn-icon">🤖</span> Play vs Bot
+      </button>
+      <button class="btn-online" onclick="startOnline()">
+        <span class="btn-icon">🌐</span> Online 1v1
+      </button>
+    </div>
+  </div>
+
+  <div id="difficultyScreen" class="screen hidden">
+    <div class="logo">🤖</div>
+    <h1>vs Bot</h1>
+    <p class="subtitle">Select difficulty</p>
+    <div class="menu-buttons">
+      <button class="btn-easy" onclick="selectBotDifficulty('easy')">Easy</button>
+      <button class="btn-medium" onclick="selectBotDifficulty('medium')">Medium</button>
+      <button class="btn-hard" onclick="selectBotDifficulty('hard')">Hard</button>
+      <button class="btn-back" onclick="backToMenu()">← Back</button>
+    </div>
+  </div>
+
+  <div id="turnScreen" class="screen hidden">
+    <div class="logo" id="turnLogo">👥</div>
+    <h1 id="turnTitle">Choose Your Turn</h1>
+    <p id="turnSubtitle" class="subtitle">Who goes first?</p>
+    <div class="menu-buttons" id="turnButtons">
+      <button onclick="chooseTurn('first')">⚡ I Go First</button>
+      <button onclick="chooseTurn('second')">🕐 I Go Second</button>
+      <button class="btn-back" onclick="backFromTurnSelection()">← Back</button>
+    </div>
+  </div>
+
+  <div id="gameScreen" class="screen game-screen hidden">
+    <div class="game-top">
+      <div id="modeText" class="mode-badge">Offline 1v1</div>
+      <div id="connectionStatus" class="status-indicator hidden">
+        <span class="status-dot"></span>
+        <span id="statusText">Connected</span>
+      </div>
+    </div>
+
+    <div id="playerInfo" class="player-info hidden">
+      <div class="player-card player-x">
+        <div class="player-avatar">X</div>
+        <div class="player-details">
+          <span class="player-label">P1</span>
+          <span id="player1Name" class="player-name">You</span>
+        </div>
+      </div>
+      <div class="vs-badge">VS</div>
+      <div class="player-card player-o">
+        <div class="player-avatar">O</div>
+        <div class="player-details">
+          <span class="player-label">P2</span>
+          <span id="player2Name" class="player-name">Opp</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="status" class="game-status">Player X's turn</div>
+
+    <div class="scoreboard">
+      <div class="score-item">
+        <span class="score-label">X</span>
+        <span class="score-value" id="xScore">0</span>
+      </div>
+      <div class="score-divider">–</div>
+      <div class="score-item">
+        <span class="score-label">O</span>
+        <span class="score-value" id="oScore">0</span>
+      </div>
+    </div>
+
+    <div class="board-wrap">
+      <div class="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <svg class="win-line hidden" id="winLine" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line id="winLineSeg" x1="0" y1="0" x2="0" y2="0" />
+      </svg>
+    </div>
+
+    <div class="game-buttons">
+      <button class="btn-restart" onclick="safeRestart()">🔄 Restart</button>
+      <button class="btn-menu" onclick="backToMenu()">🏠 Menu</button>
+    </div>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-box">
+      <div class="popup-icon" id="popupIcon">🎉</div>
+      <h2 id="popupText"></h2>
+      <div id="popupButtons" class="popup-buttons">
+        <button class="btn-primary" onclick="closePopup()">Play Again</button>
+        <button class="btn-secondary" onclick="backToMenu()">Main Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="rematchPopup" class="popup hidden">
+    <div class="popup-box">
+      <div class="popup-icon">🔄</div>
+      <h2 id="rematchText">Opponent wants a rematch!</h2>
+      <p class="rematch-subtitle">Accept?</p>
+      <div class="popup-buttons">
+        <button class="btn-accept" onclick="acceptRematch()">Accept</button>
+        <button class="btn-decline" onclick="declineRematch()">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
