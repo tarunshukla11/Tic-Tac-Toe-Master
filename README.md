@@ -1,264 +1,245 @@
 # 🎮 Tic-Tac-Toe Master
 
 <p align="center">
+  <img src="https://img.shields.io/github/stars/tarunshukla11/Tic-Tac-Toe-Master?style=for-the-badge&logo=github&label=Stars" alt="GitHub Stars">
+  <img src="https://img.shields.io/github/forks/tarunshukla11/Tic-Tac-Toe-Master?style=for-the-badge&logo=github&label=Forks" alt="GitHub Forks">
+  <img src="https://img.shields.io/github/last-commit/tarunshukla11/Tic-Tac-Toe-Master?style=for-the-badge&logo=github&label=Last%20Commit" alt="Last Commit">
+  <img src="https://img.shields.io/github/license/tarunshukla11/Tic-Tac-Toe-Master?style=for-the-badge&label=License" alt="License">
+</p>
+
+<p align="center">
   <strong>A modern Tic-Tac-Toe game with AI opponents, local multiplayer, and online 1v1 multiplayer.</strong>
 </p>
 
 <p align="center">
-  <a href="https://tarunshukla11.github.io/Tic-Tac-Toe-Master/">🌐 Live Demo</a>
-  •
-  <a href="https://github.com/tarunshukla11/Tic-Tac-Toe-Master">💻 Source Code</a>
-  •
-  <a href="https://github.com/tarunshukla11/Tic-Tac-Toe-Master/releases">📱 Download APK</a>
+  Play against friends, challenge the AI, or create an online room and play from anywhere.
+</p>
+
+<p align="center">
+  <a href="https://tarunshukla11.github.io/Tic-Tac-Toe-Master/">
+    <img src="https://img.shields.io/badge/🌐%20PLAY%20NOW-Live%20Demo-0f0f1a?style=for-the-badge" alt="Play Now">
+  </a>
+  <a href="https://github.com/tarunshukla11/Tic-Tac-Toe-Master/releases">
+    <img src="https://img.shields.io/badge/📱%20DOWNLOAD-Android%20APK-0f0f1a?style=for-the-badge" alt="Download APK">
+  </a>
 </p>
 
 ---
 
-## ✨ Overview
+## 📸 Preview
 
-**Tic-Tac-Toe Master** is a feature-rich implementation of the classic Tic-Tac-Toe game built with **HTML, CSS, and JavaScript**.
+<p align="center">
+  <img src="screenshots/main-menu.png" alt="Tic-Tac-Toe Master Main Menu" width="800">
+</p>
 
-It supports traditional local gameplay, multiple AI difficulty levels, and real-time online multiplayer using **PeerJS and WebRTC**.
-
-The project is designed to work smoothly on desktop and mobile browsers, with an Android version available through Capacitor.
+> Replace the image above with your actual screenshot after adding it to `screenshots/main-menu.png`.
 
 ---
 
-## 🚀 Features
+## ✨ What is Tic-Tac-Toe Master?
 
-### 👥 Offline 1v1
+**Tic-Tac-Toe Master** is a modern implementation of the classic Tic-Tac-Toe game built with **HTML, CSS, and JavaScript**.
+
+Instead of being limited to a basic local board, the project includes:
+
+* 👥 Offline 1v1 multiplayer
+* 🤖 Three AI difficulty levels
+* 🌐 Online 1v1 multiplayer
+* 🔑 Room-code based games
+* 📱 Android APK
+* 🎨 Responsive mobile-friendly interface
+* 🏆 Score tracking
+* 🔄 Rematch functionality
+
+The project is designed to work across **desktop and mobile browsers**, with an Android application built using **Capacitor**.
+
+---
+
+# 🚀 Play Now
+
+### 🌐 Web Version
+
+**Play directly in your browser:**
+
+👉 https://tarunshukla11.github.io/Tic-Tac-Toe-Master/
+
+No installation required.
+
+### 📱 Android
+
+An Android APK is available through GitHub Releases.
+
+👉 https://github.com/tarunshukla11/Tic-Tac-Toe-Master/releases
+
+---
+
+# 🎮 Game Modes
+
+## 👥 Offline 1v1
 
 Play against another person on the same device.
 
+**Features:**
+
 * Two-player local gameplay
 * Automatic turn handling
-* Randomized player symbol assignment
+* Player symbol assignment
 * Score tracking
-* Restart and main-menu controls
-* Smooth game animations
+* Restart functionality
+* Smooth animations
 
-### 🤖 Player vs Bot
+---
 
-Challenge the computer with three difficulty levels:
+## 🤖 Player vs Bot
 
-| Difficulty | Description                                            |
-| ---------- | ------------------------------------------------------ |
-| 🟢 Easy    | Makes simple/random moves                              |
-| 🟡 Medium  | Attempts to win and block the player's moves           |
-| 🔴 Hard    | Uses strategic decision-making and minimax-based logic |
+Challenge the computer with three difficulty levels.
+
+| Difficulty    | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| 🟢 **Easy**   | Makes simple/random moves                              |
+| 🟡 **Medium** | Attempts to win and block the player                   |
+| 🔴 **Hard**   | Uses strategic decision-making and minimax-based logic |
 
 You can also choose whether **you or the bot goes first**.
 
-### 🌐 Online 1v1 Multiplayer
+---
 
-Play Tic-Tac-Toe with another player over the internet.
+## 🌐 Online 1v1
 
-* Peer-to-peer multiplayer
-* 6-character room codes
-* Host or join a game
-* Real-time move synchronization
-* Connection status indicator
-* Automatic player assignment
-* Opponent disconnect handling
-* Rematch system
-* NAT traversal support through STUN/TURN configuration
+Play against another player over the internet.
 
-The multiplayer system uses **PeerJS over WebRTC**, allowing players to establish a direct connection without requiring a dedicated game server.
+### Features
 
-### 🎨 Modern Interface
+* 🔑 6-character room codes
+* 👑 Host or join a game
+* ⚡ Real-time move synchronization
+* 🔗 Peer-to-peer communication
+* 📡 Connection status
+* 🔄 Rematch system
+* 🚪 Opponent disconnect handling
+* 📱 Works across supported desktop and mobile browsers
 
+---
+
+# 🌐 How Online Multiplayer Works
+
+Online multiplayer uses **PeerJS and WebRTC** to establish communication between players.
+
+### Host
+
+1. Open **Online 1v1**
+2. Select **Host Game**
+3. A room code is generated
+4. Share the code with your opponent
+5. Wait for the opponent to connect
+6. Start playing
+
+### Join
+
+1. Open **Online 1v1**
+2. Select **Join Game**
+3. Enter the room code
+4. Join the room
+5. Wait for the connection
+6. Start playing
+
+### Technology
+
+```text
+Player A
+   │
+   │
+   ▼
+PeerJS
+   │
+   ▼
+WebRTC Connection
+   │
+   ▼
+PeerJS
+   │
+   │
+   ▼
+Player B
+```
+
+This allows the game to synchronize moves between players without requiring a traditional centralized game server for the actual gameplay connection.
+
+---
+
+# 🎨 Features
+
+### 🕹️ Gameplay
+
+* Classic Tic-Tac-Toe rules
+* Offline multiplayer
+* AI opponents
+* Multiple difficulty levels
+* First-player selection
+* Score tracking
+* Restart and rematch functionality
+
+### 🌐 Multiplayer
+
+* Online 1v1
+* Room codes
+* Peer-to-peer networking
+* Real-time moves
+* Connection status
+* Disconnect handling
+
+### 🎨 UI/UX
+
+* Modern dark interface
 * Responsive layout
-* Mobile-friendly design
+* Mobile-friendly controls
 * Animated loading screen
 * Animated moves
 * Win-line animation
 * Game status indicators
 * Scoreboard
 * Online player information
-* Rematch popup
-* Clean dark-themed interface
+* Rematch interface
 
 ---
 
-## 🎮 Game Modes
+# 🛠️ Tech Stack
 
-```text
-                    TIC-TAC-TOE MASTER
-                           │
-             ┌─────────────┼─────────────┐
-             │             │             │
-        Offline 1v1     Play vs Bot   Online 1v1
-             │             │             │
-          2 Players     ┌──┼──┐       Host / Join
-                        │  │  │
-                      Easy Med Hard
-```
+## Frontend
 
----
-
-## 🌐 Online Multiplayer
-
-### Host a Game
-
-1. Open **Online 1v1**.
-2. Select **Host Game**.
-3. A unique 6-character room code is generated.
-4. Copy the code.
-5. Send the code to your opponent.
-6. Wait for the opponent to join.
-7. The game starts automatically.
-
-### Join a Game
-
-1. Open **Online 1v1**.
-2. Select **Join Game**.
-3. Enter the host's room code.
-4. Select **Join**.
-5. Wait for the connection.
-6. Start playing.
-
-### Connection Technology
-
-Online multiplayer uses:
-
-* **PeerJS**
-* **WebRTC**
-* **STUN**
-* **TURN**
-
-The project includes STUN and TURN configuration to improve connectivity across different networks, including situations where direct peer-to-peer connections may fail.
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square\&logo=html5\&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square\&logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=flat-square\&logo=javascript\&logoColor=black)
 
 * HTML5
 * CSS3
 * JavaScript (ES6+)
 
-### Multiplayer
+## Multiplayer
+
+![PeerJS](https://img.shields.io/badge/PeerJS-WebRTC-222222?style=flat-square)
 
 * PeerJS
 * WebRTC
 * STUN
-* TURN
 
-PeerJS is loaded in the web application through its browser library.
+## Android
 
-### Android
+![Capacitor](https://img.shields.io/badge/Capacitor-119EFF?style=flat-square\&logo=capacitor\&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=flat-square\&logo=android\&logoColor=white)
 
 * Capacitor
 * Android SDK
 * Gradle
 
-The Android project is generated from the web application using Capacitor.
+## Deployment
+
+* GitHub Pages
+* GitHub Releases
 
 ---
 
-## 📁 Project Structure
-
-```text
-Tic-Tac-Toe-Master/
-│
-├── index.html          # Main game interface
-├── style.css           # UI and animations
-├── game.js             # Game logic and multiplayer
-│
-├── package.json        # Project configuration
-├── package-lock.json   # Dependency lock file
-├── capacitor.config.json
-│
-├── README.md           # Project documentation
-└── .gitignore          # Git exclusions
-```
-
-The repository intentionally contains only the important source and project files. Generated Android build files, `node_modules`, local configuration, and other unnecessary files are excluded from version control.
-
----
-
-## 💻 Run Locally
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/tarunshukla11/Tic-Tac-Toe-Master.git
-```
-
-### 2. Enter the project
-
-```bash
-cd Tic-Tac-Toe-Master
-```
-
-### 3. Open the game
-
-For basic offline gameplay, you can open:
-
-```text
-index.html
-```
-
-directly in a modern browser.
-
-For the best experience, especially when testing online multiplayer, use a local web server.
-
-### Using Live Server
-
-If you have Node.js installed:
-
-```bash
-npm install -g live-server
-```
-
-Then run:
-
-```bash
-live-server
-```
-
-The game will open in your browser.
-
----
-
-## 📱 Android App
-
-An Android version of Tic-Tac-Toe Master has been built using **Capacitor**.
-
-The APK can be distributed separately through the repository's **GitHub Releases** section.
-
-### Android Build
-
-The Android project is intentionally not included in the main source repository because generated Android/Gradle files are unnecessary for users who only need the web source and APK.
-
----
-
-## 🔒 Repository Hygiene
-
-This repository intentionally avoids committing:
-
-```text
-node_modules/
-android/
-android/app/build/
-android/.gradle/
-android/local.properties
-.env
-*.jks
-*.keystore
-*.pem
-*.key
-IDE configuration
-temporary files
-build output
-```
-
-This keeps the repository lightweight and helps prevent accidental exposure of local configuration or signing credentials.
-
----
-
-## 📊 Project Highlights
+# 📊 Project Status
 
 | Feature                     | Status |
 | --------------------------- | :----: |
@@ -270,24 +251,130 @@ This keeps the repository lightweight and helps prevent accidental exposure of l
 | Online 1v1                  |    ✅   |
 | Room Codes                  |    ✅   |
 | Peer-to-Peer Multiplayer    |    ✅   |
-| STUN/TURN Support           |    ✅   |
 | Connection Status           |    ✅   |
 | Rematch System              |    ✅   |
 | Score Tracking              |    ✅   |
 | Responsive UI               |    ✅   |
+| Web Deployment              |    ✅   |
 | Android APK                 |    ✅   |
 
 ---
 
-## 🔮 Future Improvements
+# 💻 Run Locally
 
-Possible future improvements include:
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/tarunshukla11/Tic-Tac-Toe-Master.git
+```
+
+## 2. Enter the project
+
+```bash
+cd Tic-Tac-Toe-Master
+```
+
+## 3. Run the project
+
+For basic offline gameplay, you can open:
+
+```text
+index.html
+```
+
+directly in a modern browser.
+
+For online multiplayer testing, using a local web server is recommended.
+
+### Using Live Server
+
+If Node.js is installed:
+
+```bash
+npm install -g live-server
+```
+
+Then:
+
+```bash
+live-server
+```
+
+The application will open in your browser.
+
+---
+
+# 📱 Android APK
+
+The Android version is built using **Capacitor**.
+
+The generated Android project/build files are not required for users who simply want to play the game, so they are kept out of the main source repository.
+
+Download the latest APK from:
+
+👉 https://github.com/tarunshukla11/Tic-Tac-Toe-Master/releases
+
+---
+
+# 📁 Project Structure
+
+```text
+Tic-Tac-Toe-Master/
+│
+├── index.html
+├── style.css
+├── game.js
+│
+├── package.json
+├── package-lock.json
+├── capacitor.config.json
+│
+├── screenshots/
+│   ├── main-menu.png
+│   ├── gameplay.png
+│   └── online-multiplayer.png
+│
+├── README.md
+└── .gitignore
+```
+
+---
+
+# 🔒 Repository Hygiene
+
+The repository intentionally excludes generated files and sensitive configuration.
+
+```text
+node_modules/
+android/
+android/app/build/
+android/.gradle/
+android/local.properties
+
+.env
+*.jks
+*.keystore
+*.pem
+*.key
+
+IDE configuration
+temporary files
+build output
+```
+
+This keeps the repository lightweight and helps prevent accidental exposure of local configuration or signing credentials.
+
+---
+
+# 🔮 Roadmap
+
+Future improvements may include:
 
 * [ ] Player profiles
-* [ ] Online player statistics
+* [ ] Custom player names
+* [ ] Online statistics
 * [ ] Match history
 * [ ] Leaderboards
-* [ ] Custom player names
 * [ ] Game sound effects
 * [ ] Additional board themes
 * [ ] Improved matchmaking
@@ -297,11 +384,9 @@ Possible future improvements include:
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-Screenshots can be added here as the project evolves.
-
-Example:
+Add screenshots here as the project develops.
 
 ```markdown
 ![Main Menu](screenshots/main-menu.png)
@@ -313,29 +398,47 @@ Example:
 
 ---
 
-## 📄 License
-
-This project is open-source.
-
-See the repository for the latest source code and project information.
-
----
-
-## 👨‍💻 Author
+# 👨‍💻 About the Developer
 
 **Tarun Shukla**
 
 Computer Science Engineering Student
 Developer • Programmer • Builder
 
-GitHub: **tarunshukla11**
+### Connect
+
+* GitHub: [@tarunshukla11](https://github.com/tarunshukla11)
+* LinkedIn: [Tarun Shukla](https://www.linkedin.com/in/tarun-kumar-shukla-76a65a370/)
+
+---
+
+# ⭐ Support the Project
+
+If you enjoyed **Tic-Tac-Toe Master**, consider:
+
+⭐ Giving the repository a star
+📱 Trying the Android version
+🌐 Playing the online version
+🐛 Reporting bugs
+💡 Suggesting improvements
+🔀 Contributing to the project
+
+Every star and piece of feedback helps the project grow.
+
+---
+
+# 📄 License
+
+This project is open-source.
+
+See the repository for the latest source code and licensing information.
 
 ---
 
 <p align="center">
-  ⭐ If you like the project, consider giving it a star!
+  <strong>Built with HTML, CSS, JavaScript, PeerJS and Capacitor.</strong>
 </p>
 
 <p align="center">
-  Built with HTML, CSS, JavaScript, PeerJS and Capacitor.
+  🎮 Play • 🤖 Challenge • 🌐 Connect
 </p>
