@@ -1,13 +1,13 @@
 {
   "name": "tic-tac-toe-master",
   "version": "1.0.0",
-  "description": "",
+  "description": "A browser-based Tic-Tac-Toe game with AI, local multiplayer, and online multiplayer.",
   "main": "game.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --check game.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["tic-tac-toe", "game", "javascript", "capacitor", "peerjs"],
+  "author": "Tarun Shukla",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
